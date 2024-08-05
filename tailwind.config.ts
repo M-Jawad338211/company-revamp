@@ -14,6 +14,13 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    theme: {
+      extend: {
+        colors: {
+          'navy-blue': '#000080', // Adjust this hex code to match your exact navy blue shade
+        },
+      },
+    },
   },
   plugins: [],
 };
