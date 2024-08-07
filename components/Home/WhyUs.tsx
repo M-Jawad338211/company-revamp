@@ -1,5 +1,6 @@
 'use client'
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import 'animate.css';
 
 const cards = [
   {
@@ -41,6 +42,33 @@ const cards = [
 ];
 
 const WhyUs = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animateanimated', 'animatebackInUp');
+        }
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="bg-blue-50 py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="max-w-3xl mx-auto text-center">
@@ -54,13 +82,12 @@ const WhyUs = () => {
           client success and satisfaction through exceptional value.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="bg-white  
-             flex flex-col justify-center items-center text-center
-            h-[350px]  p-6 rounded-lg shadow-md transition-colors duration-300 ease-in-out hover:bg-[#070B34] group hover:text-white"
+            className="bg-white flex flex-col justify-center items-center text-center
+            h-[350px] p-6 rounded-lg shadow-md transition-colors duration-300 ease-in-out hover:bg-[#0e1460] group hover:text-white"
           >
             <div className="text-4xl mb-4">{card.icon}</div>
             <h3 className="text-xl font-semibold text-navy-blue mb-2">

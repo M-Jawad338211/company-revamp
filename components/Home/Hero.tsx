@@ -1,10 +1,10 @@
 import React from 'react';
-
+import 'animate.css';
 function Hero() {
   return (
     <div className='container mx-auto px-5 mt-24' >
        <section className="text-white">
-      <h1 className=" text-[50px] md:text-[70px] font-bold ">
+      <h1 className="animate__animated animate__backInLeft  text-[50px] md:text-[70px] font-bold ">
         Delivering<br />Intelligent Solutions
       </h1>
       <p className="mb-8 max-w-2xl">

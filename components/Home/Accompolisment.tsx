@@ -60,7 +60,7 @@ const Accomplishments = () => {
   };
 
   return (
-    <div ref={sectionRef} className="relative overflow-hidden bg-blue-900 text-white py-20 px-4 sm:px-6 lg:px-8 h-[50vh]">
+    <div ref={sectionRef} className="relative overflow-hidden bg-[#0e1460] text-white py-20 px-4 sm:px-6 lg:px-8 h-[50vh]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-2">OUR ACCOMPLISHMENTS</h2>
         <div className="flex justify-center mb-8">

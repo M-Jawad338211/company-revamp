@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <div className='relative overflow-hidden'>
-      <footer className="bg-[#070B34] z-10 text-white py-8 relative overflow-hidden">
+    
+      <footer className="bg-[#0e1460] text-white py-8 relative overflow-hidden">
         <div className="container mx-auto px-6">
           {/* Main footer content */}
           <div className="flex flex-col md:flex-row justify-between items-start mb-8">
@@ -102,7 +102,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </div>
+  
   );
 };
 
